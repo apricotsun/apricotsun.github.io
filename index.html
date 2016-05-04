@@ -1,0 +1,12 @@
+---
+layout: default
+---
+{% for post in site.posts limit 100 %}
+<div class="title col-md-8 col-xs-8">
+	<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+</div>
+<div class="date col-md-4 col-xs-4">
+	<span>{{ post.date | date_to_string }}</span> - 
+	<span>{{ post.date | date: "%H:%M" }}</span>
+</div>
+{% endfor %}

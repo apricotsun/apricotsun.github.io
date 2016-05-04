@@ -1,0 +1,91 @@
+/**
+ * Site header
+ */
+
+.site-title {
+    color: #666;
+    line-height: 1;
+    outline: none;
+    color: #666;
+    font-family: 'Helvetica', sans-serif;
+    font-style:normal;
+    font-weight:bold;
+    text-transform:lowercase;
+    letter-spacing:-2px;
+    font-size:35px;
+    margin:0;
+    padding:0;
+    text-decoration:none;
+}
+.site-title:hover {
+    color: #ff6d6d;
+    outline: none !important;
+    text-decoration: none;
+}
+/**
+ * Page content
+ */
+
+.page-content {
+font-size:13px !important;
+ 
+}
+.page-heading {
+    font-size: 20px;
+}
+.post-list {
+    margin-left: 0;
+    list-style: none;
+    > li {
+        margin-bottom: $spacing-unit;
+    }
+}
+.post-meta {
+    font-size: $small-font-size;
+    color: $grey-color;
+}
+.post-link {
+    display: block;
+    font-size: 24px;
+}
+/**
+ * Posts
+ */
+
+.post-header {
+	font-family: 'Helvetica', sans-serif;
+    font-size: 30px;
+    color: #666;
+    line-height: 1em;
+    white-space: nowrap !important;
+}
+.post-title {
+    font-size: 42px;
+    letter-spacing: -1px;
+    line-height: 1;
+    @include media-query($on-laptop) {
+        font-size: 36px;
+    }
+}
+.post-content {
+	font-size: 12px !important;
+    margin-bottom: $spacing-unit;
+    h2 {
+        font-size: 32px;
+        @include media-query($on-laptop) {
+            font-size: 28px;
+        }
+    }
+    h3 {
+        font-size: 26px;
+        @include media-query($on-laptop) {
+            font-size: 22px;
+        }
+    }
+    h4 {
+        font-size: 20px;
+        @include media-query($on-laptop) {
+            font-size: 18px;
+        }
+    }
+}

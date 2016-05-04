@@ -1,0 +1,76 @@
+---
+layout: default
+---
+<style type="text/css">
+div.usr {
+	padding-left: 0px !important;
+}
+input {
+	border: 1px solid #666;
+	width: 150px !important;
+}
+</style>
+<script type = "text/javascript">
+var count = 2;
+function validate() {
+var un = document.myform.username.value;
+var pw = document.myform.pword.value;
+var valid = false;
+
+var unArray = ["apricot"];
+var pwArray = ["sunset"];
+
+for (var i=0; i <unArray.length; i++) {
+if ((un == unArray[i]) && (pw == pwArray[i])) {
+valid = true;
+break;
+}}
+
+if (valid) {
+window.location = "http://prose.io/#apricotsun/web/tree/gh-pages/_posts";
+return false;
+}
+
+var t = " tries";
+if (count == 1) {t = "attempts"}
+
+if (count >= 1) {
+alert ("Invalid username and/or password.  You have " + count + t + " left.");
+document.myform.username.value = "";
+document.myform.pword.value = "";
+setTimeout("document.myform.username.focus()", 25);
+setTimeout("document.myform.username.select()", 25);
+count --;
+}
+
+else {
+alert ("Exceeded max attempts.");
+document.myform.username.value = "Try again later.";
+document.myform.pword.value = "";
+document.myform.username.disabled = true;
+document.myform.pword.disabled = true;
+return false;
+}}
+</script>
+<div class="title col-md-8 col-xs-12">
+	<a>Username</a>
+</div>
+<form name = "myform">
+<div class="usr col-md-8 col-xs-12">
+	<input type="text" name="username">
+</div>
+<div class="title col-md-8 col-xs-12">
+	<a>Password</a>
+</div>
+<div class="usr col-md-8 col-xs-12">
+<input type = "password"
+name="pword"
+id = "txtSearch"
+onkeydown = "if (event.keyCode == 13)
+                document.getElementById('pwGo').click()"/>
+</div>
+<input type = "button"
+	id = "pwGo"
+	hidden="false"
+	onclick = "validate()"/>
+</form>

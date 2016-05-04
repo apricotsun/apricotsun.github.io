@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="title col-md-8 col-xs-8">
+		<a>{{ page.title }}</a>
+	</div>
+	<div class="date col-md-4 col-xs-4">
+		<span>{{ page.date | date_to_string }}</span> - 
+		<span>{{ page.date | date: "%H:%M" }}</span>
+	</div>
+	<div class="text page-content col-md-12" itemprop="articleBody">
+		{{ content }}
+	</div>
+</article>
+	
