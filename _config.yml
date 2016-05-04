@@ -12,7 +12,7 @@ title: apricotsun
 email: apricotsun@protonmail.ch
 description: > # this means to ignore newlines until "baseurl:"
   personal blog
-baseurl: "/web" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://apricotsun.github.io" # the base hostname & protocol for your site
 twitter_username: apricotsunset
 github_username: apricotsun
